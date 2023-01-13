@@ -1,0 +1,61 @@
+.btn_start_div,.quiz_box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.quiz_box.active{
+    opacity: 1; /*quiz box görünür*/
+    pointer-events: auto; /*tüm nesne olayları aktif olur*/
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+.quiz_box{
+    width:550px;
+    transform:translate(-50%,-50%) scale(0.5);/* kutuyu belirtilen ebatta küçültür */
+    transition:all 0.5s ease;/* quize box un ivme kazanmasını sağlar, hareket efektidir*/
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+.quiz_box header .title{
+    font-size: 20px;
+    /* font-weight: 600; */
+}
+
+.quiz_box .question_text{
+    font-size:20px;
+    /* font-weight: 600; */
+}
+
+.quiz_box .option-list{
+    padding:18px 0;}
+
+.quiz_box .option-list .option{
+   border:1px solid #151D3B;
+   border-radius: 5px;
+   padding:8px 15px;
+   font-size:16px;
+   margin-bottom:10px;
+   cursor:pointer;
+
+   display: flex;
+    align-items: center;
+   justify-content: space-between; 
+
+}
+
+.quiz_box .option-list .option.correct{
+color:#1d3738;
+background-color: #d4edda;
+}
+
+.quiz_box .option-list .option.incorrect{
+  color:#721c24;  
+  background-color: #f8d7da;
+}
